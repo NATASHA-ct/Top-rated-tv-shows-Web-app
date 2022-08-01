@@ -1,56 +1,60 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
-
-> Description the project.
+# Top-rated-tv-shows-Web-app
+> A web application showing API results of top rated tv shows.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Es6
+- HTML
+- CSS
+- Webpack
+
 
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
 
 
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+### Setup
+- To clone the repository run `[https://github.com/NATASHA-ct/Top-rated-tv-shows-Web-app]` in your terminal
+- run cd 
+- run npm install
+- run npm run build
+- run npm start to view wbsite
 
 ### Prerequisites
-
-### Setup
+- Github flow knowledge.
+- Basic CSS and HTML.
+- Installation of files.
+- Gitflow
+- ES6 syntax
+- Testing
+- API
+- Webpack
 
 ### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+- Set up Github Actions
+- Set up linter > Lighthouse , Webhint ,Stylelint ,
+- Added Eslint
+- Jest for testing
 
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Natasha Tatenda Chirombe**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@NATASHA-ct]((https://github.com/NATASHA-ct)
+- Twitter: [@NatashaChirombe]
+- LinkedIn: [Natasha Chirombe](linkedin.com/in/natasha-chirombe-1531aa17b)
 
-👤 **Author2**
+👤 **Cindy Dorantes**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@CindyDorantes](https://github.com/CindyDorantes)
+- Twitter: [@CindyDorantes10](https://twitter.com/CindyDorantes10)
+- LinkedIn: [Cindy Melisa Dorantes Sánchez](https://www.linkedin.com/in/cindydorantessanchez/)
 
 ## 🤝 Contributing
 
@@ -62,12 +66,7 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
