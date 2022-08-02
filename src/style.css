@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
 html {
   width: 100%;
   box-sizing: border-box;
-  color: #101010;
+  color:white;
+  background-color: var(--black);
 }
 
 body {
@@ -16,19 +20,38 @@ body {
   padding: 0;
 }
 
+
+:root {
+  --black: #272a31;
+  --yellow:#f5c518;
+  --white: #fff;
+  --font: 'PT Sans', sans-serif;
+}
+
 header{
     display: flex;
     flex-direction:row;
+    align-items: center;
+    gap:10em;
+    font-weight: 700;
+    justify-content: space-around;
+    margin:0.5em
+    0;
+    background-color: #000000;
 }
 
 .nav-links{
     display: flex;
     flex-direction: row;
     list-style: none;
-
+    gap:5em;
 }
 
-
+.nav-links a{
+     text-decoration:none;
+     color:var(--white);
+     font-size: 25px;
+}
 
 
 
