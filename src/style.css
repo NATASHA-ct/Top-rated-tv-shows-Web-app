@@ -1,3 +1,27 @@
-body {
-    background-color: bisque;
+html {
+  width: 100%;
+  box-sizing: border-box;
+  color: #101010;
 }
+
+body {
+  width: 100%;
+ }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: ;
+}
+
+
+
+
+
