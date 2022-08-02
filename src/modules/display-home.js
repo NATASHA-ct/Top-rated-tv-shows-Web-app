@@ -1,8 +1,9 @@
+import getShow from './get-show.js';
+
 const displayItems = document.getElementById('displayItems');
 const baseURL = 'https://api.tvmaze.com/lookup/shows?imdb=';
 
 const displayHome = (item) => {
-  
   const showItem = document.createElement('div');
   displayItems.appendChild(showItem);
 
@@ -19,21 +20,23 @@ const displayHome = (item) => {
   showInfo.appendChild(showLikes);
 
   const likesIcon = document.createElement('button');
+  likesIcon.innerHTML = '<i class="fa-regular fa-heart"></i>';
   showLikes.appendChild(likesIcon);
 
   const likesCouter = document.createElement('p');
+  likesCouter.innerHTML = '5 likes';
   showLikes.appendChild(likesCouter);
 
+  const btnComments = document.createElement('button');
+  btnComments.innerHTML = 'Comments';
+  showItem.appendChild(btnComments);
+
+  const btnReserve = document.createElement('button');
+  btnReserve.innerHTML = 'Reservations';
+  showItem.appendChild(btnReserve);
+
   const uniqueURL = `${baseURL}${item}`;
-  fetch(uniqueURL)
-    .then(async (response) => {
-      const data = await response.json();
-      return data;
-    })
-    .then((data) => {
-      showImg.src = data.image.medium;
-      showName.innerHTML = data.name;
-    });
+  getShow(uniqueURL, showImg, showName);
 };
 
 export default displayHome;
