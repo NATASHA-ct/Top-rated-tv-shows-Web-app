@@ -115,7 +115,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/logo.png */ \"./src/assets/logo.png\");\n\n\n\ndocument.getElementById('logo').src = _assets_logo_png__WEBPACK_IMPORTED_MODULE_1__;\n\n//# sourceURL=webpack://top-rated-tv-shows-web-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/logo.png */ \"./src/assets/logo.png\");\n\r\n\r\n\r\ndocument.getElementById('logo').src = _assets_logo_png__WEBPACK_IMPORTED_MODULE_1__;\n\n//# sourceURL=webpack://top-rated-tv-shows-web-app/./src/index.js?");
 
 /***/ }),
 

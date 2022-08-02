@@ -5,6 +5,7 @@ html {
   box-sizing: border-box;
   color: white;
   background-color: var(--black);
+  font-family: PT Sans, sans-serif;
 }
 
 body {
@@ -50,4 +51,13 @@ header {
   text-decoration: none;
   color: var(--white);
   font-size: 25px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2vh 3vw;
+    border: 2px solid rgb(24, 22, 22);
 }
