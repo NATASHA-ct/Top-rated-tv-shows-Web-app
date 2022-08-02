@@ -2,8 +2,7 @@ const displayItems = document.getElementById('displayItems');
 const baseURL = 'https://api.tvmaze.com/lookup/shows?imdb=';
 
 const displayHome = (item) => {
-  const uniqueURL = `${baseURL}${item}`;
-  console.log(uniqueURL);
+  
   const showItem = document.createElement('div');
   displayItems.appendChild(showItem);
 
@@ -24,6 +23,17 @@ const displayHome = (item) => {
 
   const likesCouter = document.createElement('p');
   showLikes.appendChild(likesCouter);
+
+  const uniqueURL = `${baseURL}${item}`;
+  fetch(uniqueURL)
+    .then(async (response) => {
+      const data = await response.json();
+      return data;
+    })
+    .then((data) => {
+      showImg.src = data.image.medium;
+      showName.innerHTML = data.name;
+    });
 };
 
 export default displayHome;
