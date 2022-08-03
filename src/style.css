@@ -136,15 +136,27 @@ footer {
  position: fixed;
  top: 0;
  left: 0;
+ right: 0;
+
+ height: 100vh;
+ width: 90%;
+
  display:flex;
  flex-direction: column;
  align-items: center;
- /* overflow-y: scroll; */
- width: 100%;
+ overflow-y: scroll; 
  background-color: var(--black);
  border-radius: 2%;
- border:3px solid #f5c518;
+ border:3px solid #554302;
  z-index: 500;
+ padding:5em;
+ margin: auto;
+ margin-top: 0.5em;
+ margin-bottom: 0.8em;
+}
+
+#popup::-webkit-scrollbar {
+  display: none;
 }
 
 li{
@@ -154,8 +166,11 @@ li{
 .show-top{
   display:flex;
   flex-direction:row;
-  
-}
+  border:3px solid #554302;
+  padding:100px;
+  width: 100px;
+  height: 100px;
+ }
 
 .show-name{
   margin-top: 1em;
