@@ -1,10 +1,17 @@
 import './style.css';
 import logo from "./assets/logo.png";
-// import dora from "./assets/dora.jpg";
+import dora from "./assets/dora.jpg";
 import displayHome from './modules/display-home.js';
 
-document.getElementById("logo").src = logo;
-document.querySelector(".show-image").src = dora;
+//adding logo to the header 
+
+const logoContainer = document.querySelector(".logo");
+const imgLogo = document.createElement("img");
+imgLogo.src = logo;
+imgLogo.id = "logo";
+imgLogo.alt = "logo picture";
+logoContainer.appendChild(imgLogo);
+
 
 const theOffice = 'tt0386676';
 const breakingBad = 'tt0944947';
@@ -31,8 +38,7 @@ opencomments.forEach((btn) => {
 
     commentsPopup.innerHTML = `
         <div class="show-top">
-            <img class="show-image" src="./assets/dora.jpg" alt="project placeholder image">
-        
+            <img id="dora" src="" alt="logo picture">       
          </div>
         
         <h2 class="show-name">SHOWNAME</h2>
@@ -63,6 +69,8 @@ opencomments.forEach((btn) => {
         </section>
     
       `;
+
+    document.querySelector(".show-image").src = dora;
 
     popupContainer.appendChild(commentsPopup);
 

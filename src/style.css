@@ -133,10 +133,19 @@ footer {
 
 /*POP UP STYLES*/
 #popup{
+ position: fixed;
+ top: 0;
+ left: 0;
  display:flex;
  flex-direction: column;
  align-items: center;
-  }
+ /* overflow-y: scroll; */
+ width: 100%;
+ background-color: var(--black);
+ border-radius: 2%;
+ border:3px solid #f5c518;
+ z-index: 500;
+}
 
 li{
   list-style: none;
