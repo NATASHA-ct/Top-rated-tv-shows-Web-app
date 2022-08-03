@@ -53,6 +53,73 @@ header {
   font-size: 25px;
 }
 
+#displayItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 1vh 10vw 5vh 10vw;
+}
+
+.showItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8vh 4vw;
+}
+
+.showItem > img {
+  border-radius: 6px;
+}
+
+.showItem > button {
+  border: none;
+  background-color: var(--yellow);
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 5px;
+  width: 80%;
+  text-align: center;
+}
+
+.showItem > button:hover {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 1px 1px 0 0, 2px 2px 0 0, 3px 3px 0 0, 4px 4px 0 0, 5px 5px 0 0;
+}
+
+.showInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.showInfo > p {
+  inline-size: 150px;
+  overflow-wrap: break-word;
+  font-size: large;
+}
+
+.showLikes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btnLike {
+  border: none;
+  background: none;
+  text-decoration: none;
+  font-size: 22px;
+  color: grey;
+  cursor: pointer;
+}
+
 /* footer style */
 footer {
   position: fixed;
@@ -61,4 +128,5 @@ footer {
   bottom: 0;
   padding: 2vh 3vw;
   border: 2px solid rgb(24, 22, 22);
+  background-color: var(--black);
 }
