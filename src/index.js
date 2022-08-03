@@ -1,8 +1,10 @@
 import './style.css';
-import logo from './assets/logo.png';
+import logo from "./assets/logo.png";
+// import dora from "./assets/dora.jpg";
 import displayHome from './modules/display-home.js';
 
-document.getElementById('logo').src = logo;
+document.getElementById("logo").src = logo;
+document.querySelector(".show-image").src = dora;
 
 const theOffice = 'tt0386676';
 const breakingBad = 'tt0944947';
@@ -23,7 +25,7 @@ showsArray.forEach(displayHome);
 const opencomments = document.querySelectorAll(".showbtnComment"); //CHANGE TO HOME COMMENT BTN
 const popupContainer = document.getElementById("#popup")
 
-open.forEach((btn) => {
+opencomments.forEach((btn) => {
   btn.addEventListener("click", () => {
     const commentsPopup = document.querySelector(".commentspopup");
 
@@ -31,8 +33,7 @@ open.forEach((btn) => {
         <div class="show-top">
             <img class="show-image" src="./assets/dora.jpg" alt="project placeholder image">
         
-            <img src="./images/close.png" class="close-icon close2" id="close2">
-        </div>
+         </div>
         
         <h2 class="show-name">SHOWNAME</h2>
         
