@@ -4,12 +4,13 @@ const addLike = (item) => {
   fetch(appURL, {
     method: 'POST',
     body: JSON.stringify({
-      "item_id": item
+      item_id: item,
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
-}
+    .then(async (response) => console.log(response));
+};
 
 export default addLike;
