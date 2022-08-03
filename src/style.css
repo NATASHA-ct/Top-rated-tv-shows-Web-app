@@ -120,6 +120,8 @@ header {
   cursor: pointer;
 }
 
+.btnLike:
+
 /* footer style */
 footer {
   position: fixed;

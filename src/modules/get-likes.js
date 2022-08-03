@@ -9,7 +9,7 @@ const updateCounter = (element) => {
   }
 };
 
-const getLikes = () => {
+const getLikes = async () => {
   fetch(appURL)
     .then(async (response) => {
       const data = await response.json();

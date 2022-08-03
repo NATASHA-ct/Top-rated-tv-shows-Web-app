@@ -46,9 +46,9 @@ const displayHome = (item) => {
   const uniqueURL = `${baseURL}${item}`;
   getShow(uniqueURL, showImg, showName);
 
-  likesIcon.addEventListener('click', () => {
-    addLike(item);
-    getLikes();
+  likesIcon.addEventListener('click', async () => {
+    await addLike(item);
+    await getLikes();
   });
 };
 

@@ -1,7 +1,7 @@
 const appURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/M3YWGWQqUrOVctHXGrPW/likes/';
 
-const addLike = (item) => {
-  fetch(appURL, {
+async function addLike(item) {
+  await fetch(appURL, {
     method: 'POST',
     body: JSON.stringify({
       item_id: item,
@@ -9,8 +9,7 @@ const addLike = (item) => {
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-  })
-    .then(async (response) => console.log(response));
-};
+  });
+}
 
 export default addLike;
