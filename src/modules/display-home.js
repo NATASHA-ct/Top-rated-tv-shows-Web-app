@@ -1,8 +1,8 @@
 import getShow from './get-show.js';
+import addLike from './add-like.js';
 
 const displayItems = document.getElementById('displayItems');
 const baseURL = 'https://api.tvmaze.com/lookup/shows?imdb=';
-const appID = 'M3YWGWQqUrOVctHXGrPW';
 
 const displayHome = (item) => {
   const showItem = document.createElement('div');
@@ -40,8 +40,8 @@ const displayHome = (item) => {
   btnReserve.innerHTML = 'Reservations';
   showItem.appendChild(btnReserve);
 
-  likesIcon.addEventListener('click', (event) => {
-    console.log('event listener works');
+  likesIcon.addEventListener('click', () => {
+    addLike(item);
   })
 
   const uniqueURL = `${baseURL}${item}`;
