@@ -1,6 +1,6 @@
 import getShow from './get-show.js';
 import addLike from './add-like.js';
-import displayLikes from './display-likes.js'
+import displayLikes from './display-likes.js';
 
 const displayItems = document.getElementById('displayItems');
 const baseURL = 'https://api.tvmaze.com/lookup/shows?imdb=';
