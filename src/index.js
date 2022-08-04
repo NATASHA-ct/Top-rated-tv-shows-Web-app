@@ -24,17 +24,15 @@ const showsArray = [theOffice, breakingBad, gibi, avatar, friends, rickMorty];
 showsArray.forEach(displayHome);
 
 
-//COMMENTS POP UP//
-const opencomments = document.querySelectorAll(".showbtnComment");
-
 //EVENT LISTENER HOME COMMENT BTN TO SHOW POPUP
-const body = document.querySelector("body")
 
 showsArray.forEach((item) => {
+  const opencomments = document.querySelectorAll(".showbtnComment");
 
-  opencomments.addEventListener("click", () => {
-    showPopup(item.id);
-
-  });
+    opencomments.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        showPopup(item.id);
+      });
+    });
 
 });

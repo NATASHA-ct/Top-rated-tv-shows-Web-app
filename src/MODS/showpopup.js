@@ -129,10 +129,8 @@ const showPopup = async (id) => {
         commBtn.value = "Comment";
         commBtn.aria-required ;
         formmain.appendChild(usercomm); 
-  
- 
- body.appendChild(commentsPopup);
 
+    body.appendChild(commentsPopup);
 };
 
 export default showPopup;
