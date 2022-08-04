@@ -1,6 +1,6 @@
 import getShow from './get-show.js';
 import addLike from './add-like.js';
-import getLikes from './get-likes.js';
+import displayLikes from './display-likes.js';
 
 const displayItems = document.getElementById('displayItems');
 const baseURL = 'https://api.tvmaze.com/lookup/shows?imdb=';
@@ -33,7 +33,7 @@ const displayHome = (item) => {
   likesCouter.classList.add('counter');
   likesCouter.id = item;
   showLikes.appendChild(likesCouter);
-  getLikes();
+  displayLikes();
 
   const btnComments = document.createElement('button');
   btnComments.innerHTML = 'Comments';
@@ -48,7 +48,7 @@ const displayHome = (item) => {
 
   likesIcon.addEventListener('click', async () => {
     await addLike(item);
-    await getLikes();
+    await displayLikes();
   });
 };
 
