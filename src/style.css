@@ -109,15 +109,30 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .btnLike {
   border: none;
+  border-radius: 15px;
+  height: 30px;
+  width: 30px;
   background: none;
   text-decoration: none;
   font-size: 22px;
   color: grey;
   cursor: pointer;
+}
+
+.btnLike:hover {
+  color: darkred;
+}
+
+.btnLike:active {
+  font-size: 30px;
+  transform: translateY(-8px);
+  font-weight: bolder;
+  text-shadow: 2px 2px 5px red;
 }
 
 /* footer style */
