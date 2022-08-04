@@ -2,67 +2,62 @@ import getOneShow from './getOneShow.js';
 
 const showPopup = async (id) => {
   const showId = id;
-  const {
-    image,
-    name,
-    type,
-    language,
-    genres,
-    rating,
-  } = await getOneShow(showId);
+  const { image, name, type, language, genres, rating } = await getOneShow(
+    showId
+  );
 
   // get body element from html
-  const body = document.querySelector('body');
+  const body = document.querySelector("body");
 
   // create a div for the comments pop up, gave an id and class
-  const commentsPopup = document.createElement('div');
-  commentsPopup.id = 'popup';
-  commentsPopup.className = 'commentspopup';
+  const commentsPopup = document.createElement("div");
+  commentsPopup.className = "commentspopup";
 
   // adding the objects of popup dynamically
-  // close icon
-  const popcloseIcon = document.createElement('button');
-  popcloseIcon.classList.add('btnpopClose');
-  popcloseIcon.innerHTML = '<i class="fa-solid fa-xmark-large"></i>';
-  commentsPopup.appendChild(popcloseIcon);
 
   // image container
-  const showtop = document.createElement('div');
-  showtop.className = 'show-top';
+  const showtop = document.createElement("div");
+  showtop.className = "show-top";
   commentsPopup.appendChild(showtop);
 
-  const showimage = document.createElement('img');
-  showimage.className = 'showimage';
+  const showimage = document.createElement("img");
+  showimage.className = "showimage";
   showimage.src = image;
   showtop.appendChild(showimage);
 
+  // close icon
+  const popcloseIcon = document.createElement("button");
+  popcloseIcon.classList.add("popClose");
+  popcloseIcon.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+  showtop.appendChild(popcloseIcon);
+
   // name of the show
-  const showname = document.createElement('h2');
-  showname.className = 'show-name';
+  const showname = document.createElement("h2");
+  showname.className = "show-name";
   showname.innerText = name;
   commentsPopup.appendChild(showname);
 
   // show stats and information
-  const showstats = document.createElement('ul');
-  showstats.className = 'show-stats';
+  const showstats = document.createElement("ul");
+  showstats.className = "show-stats";
 
-  const showtype = document.createElement('li');
-  showtype.className = 'stats';
+  const showtype = document.createElement("li");
+  showtype.className = "stats";
   showtype.innerText = `Type: ${type}`;
   showstats.appendChild(showtype);
 
-  const showlanguage = document.createElement('li');
-  showlanguage.className = 'stats';
+  const showlanguage = document.createElement("li");
+  showlanguage.className = "stats";
   showlanguage.innerText = `Language: ${language}`;
   showstats.appendChild(showlanguage);
 
-  const showgenres = document.createElement('li');
-  showgenres.className = 'stats';
+  const showgenres = document.createElement("li");
+  showgenres.className = "stats";
   showgenres.innerText = `Genres: ${genres}`;
   showstats.appendChild(showgenres);
 
-  const showrating = document.createElement('li');
-  showrating.className = 'stats';
+  const showrating = document.createElement("li");
+  showrating.className = "stats";
   showrating.innerText = `Star-rating: ${rating}`;
   showstats.appendChild(showrating);
 

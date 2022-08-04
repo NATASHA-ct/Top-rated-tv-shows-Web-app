@@ -132,7 +132,7 @@ footer {
 }
 
 /* POP UP STYLES */
-#popup {
+.commentspopup {
   position: fixed;
   top: 0;
   left: 0;
@@ -168,16 +168,21 @@ li {
   height: 70vh;
   justify-content: center;
   width: 80%;
-}
-
-.btnpopClose {
-  text-align: right;
+  align-items: flex-start;
+  gap: 3em;
 }
 
 .showimage {
   margin: 0 auto;
   width: 80%;
   height: 100%;
+}
+
+.popClose {
+  font-size: 4em;
+  background-color: #181716;
+  border:none;
+  color:var(--yellow);
 }
 
 .show-name {

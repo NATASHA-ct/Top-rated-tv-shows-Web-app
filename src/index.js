@@ -27,7 +27,7 @@ showsArray.forEach(displayHome);
 
 showsArray.forEach((item) => {
   const opencomments = document.querySelectorAll('.showbtnComment');
-
+    
   opencomments.forEach((btn) => {
     btn.addEventListener('click', () => {
       showPopup(item);
