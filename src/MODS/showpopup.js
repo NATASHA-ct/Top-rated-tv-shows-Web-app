@@ -20,6 +20,12 @@ const showPopup = async (id) => {
  commentsPopup.className = "commentspopup";
 
  //adding the objects of popup dynamically 
+    // close icon
+    const popcloseIcon = document.createElement("button");
+    popcloseIcon.classList.add("btnpopClose");
+    popcloseIcon.innerHTML = '<i class="fa-solid fa-xmark-large"></i>';
+    commentsPopup.appendChild(popcloseIcon);
+
     //image container
         const showtop = document.createElement("div");
         showtop.className = "show-top";
@@ -86,23 +92,23 @@ const showPopup = async (id) => {
         
     //     commentsPopup.appendChild(viewers);
 
-//FORM ADD VIEWER AND COMMENT
-    //main container
-        const formsec = document.createElement("section");
-        formsec.className = "addComments";
-        commentsPopup.appendChild(formsec); 
+// //FORM ADD VIEWER AND COMMENT
+//     //main container
+//         const formsec = document.createElement("section");
+//         formsec.className = "addComments";
+//         commentsPopup.appendChild(formsec); 
     
-    //heading of the section
-        const hAdd = document.createElement("h2");
-        hAdd.className = "hAdd";
-        hAdd.innerText = "Add a comment";
-        formsec.appendChild(hAdd); 
+//     //heading of the section
+//         const hAdd = document.createElement("h2");
+//         hAdd.className = "hAdd";
+//         hAdd.innerText = "Add a comment";
+//         formsec.appendChild(hAdd); 
 
-    //FORM .......................
-        const formmain = document.createElement("form");
-        formmain.action = "#" ;
-        formmain.method = "GET" ;
-        formsec.appendChild(formmain); 
+//     //FORM .......................
+//         const formmain = document.createElement("form");
+//         formmain.action = "#" ;
+//         formmain.method = "GET" ;
+//         formsec.appendChild(formmain); 
 
         // //inside form inputs
         // const user = document.createElement("input");

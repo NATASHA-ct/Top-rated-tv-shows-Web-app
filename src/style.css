@@ -172,6 +172,10 @@ li{
   width: 80%;
   
  }
+
+ .btnpopClose{
+   text-align: right;
+ }
  
  .showimage{
    margin: 0 auto;
