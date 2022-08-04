@@ -28,8 +28,13 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        test: /\.(eot|svg|ttf|woff|woff2?)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '../css/fonts/[name]-[hash:8].[ext]',
+          },
+        },
       },
       {
         test: /\.xml$/i,
