@@ -25,12 +25,22 @@ showsArray.forEach(displayHome);
 
 // EVENT LISTENER HOME COMMENT BTN TO SHOW POPUP
 
-showsArray.forEach((item) => {
-  const opencomments = document.querySelectorAll('.showbtnComment');
+const openComments = document.querySelectorAll('.showbtnComment'); //-------------------new: cindy
+console.log(openComments); //-----------------------------------------------------------new: cindy
 
-  opencomments.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      showPopup(item);
-    });
-  });
-});
+openComments.forEach((btn) => { //------------------------------------------------------new: cindy
+  btn.addEventListener('click', (e) => { //---------------------------------------------new: cindy
+    const item = e.target.id;//---------------------------------------------------------new: cindy
+    console.log('id inside eventlistener');//-------------------------------------------new: cindy
+    console.log(item);//----------------------------------------------------------------new: cindy
+    showPopup(item); //-----------------------------------------------------------------new: cindy
+  }) //---------------------------------------------------------------------------------new: cindy
+}) //-----------------------------------------------------------------------------------new: cindy
+
+// showsArray.forEach((item) => {
+//   opencomments.forEach((btn) => {
+//     btn.addEventListener('click', () => {
+//       showPopup(item);
+//     });
+//   });
+// });

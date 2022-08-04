@@ -10,20 +10,21 @@ const showPopup = async (id) => {
     genres,
     rating,
   } = await getOneShow(showId);
-
+  
   // get body element from html
   const body = document.querySelector('body');
 
   // create a div for the comments pop up, gave an id and class
   const commentsPopup = document.createElement('div');
-  commentsPopup.id = 'popup';
+  //commentsPopup.id = 'popup';--------------------------------------------------------new: cindy
   commentsPopup.className = 'commentspopup';
+  body.appendChild(commentsPopup); //--------------------------------------------------new: cindy
 
   // adding the objects of popup dynamically
   // close icon
   const popcloseIcon = document.createElement('button');
   popcloseIcon.classList.add('btnpopClose');
-  popcloseIcon.innerHTML = '<i class="fa-solid fa-xmark-large"></i>';
+  popcloseIcon.innerHTML = '<i class="fa-solid fa-xmark"></i>'; //---------------------new: cindy
   commentsPopup.appendChild(popcloseIcon);
 
   // image container
