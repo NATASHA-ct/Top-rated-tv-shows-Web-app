@@ -25,12 +25,11 @@ showsArray.forEach(displayHome);
 
 // EVENT LISTENER HOME COMMENT BTN TO SHOW POPUP
 
-showsArray.forEach((item) => {
-  const opencomments = document.querySelectorAll('.showbtnComment');
-    
-  opencomments.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      showPopup(item);
-    });
+const openComments = document.querySelectorAll('.showbtnComment'); 
+
+openComments.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const item = e.target.id;
+    showPopup(item);
   });
 });
