@@ -1,18 +1,18 @@
 import './style.css';
-import logo from "./assets/logo.png";
+import logo from './assets/logo.png';
 import displayHome from './modules/display-home.js';
 import showPopup from './MODS/showpopup.js';
 
-//adding logo to the header 
+// adding logo to the header
 
-const logoContainer = document.querySelector(".logo");
-const imgLogo = document.createElement("img");
+const logoContainer = document.querySelector('.logo');
+const imgLogo = document.createElement('img');
 imgLogo.src = logo;
-imgLogo.id = "logo";
-imgLogo.alt = "logo picture";
+imgLogo.id = 'logo';
+imgLogo.alt = 'logo picture';
 logoContainer.appendChild(imgLogo);
 
-//array of shows
+// array of shows
 const theOffice = 'tt0386676';
 const breakingBad = 'tt0944947';
 const gibi = 'tt13675832';
@@ -23,16 +23,14 @@ const showsArray = [theOffice, breakingBad, gibi, avatar, friends, rickMorty];
 
 showsArray.forEach(displayHome);
 
-
-//EVENT LISTENER HOME COMMENT BTN TO SHOW POPUP
+// EVENT LISTENER HOME COMMENT BTN TO SHOW POPUP
 
 showsArray.forEach((item) => {
-  const opencomments = document.querySelectorAll(".showbtnComment");
+  const opencomments = document.querySelectorAll('.showbtnComment');
 
-    opencomments.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        showPopup(item);
-      });
+  opencomments.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      showPopup(item);
     });
-
+  });
 });

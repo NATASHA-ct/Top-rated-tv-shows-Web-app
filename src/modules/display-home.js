@@ -33,8 +33,8 @@ const displayHome = (item) => {
 
   const btnComments = document.createElement('button');
   btnComments.innerHTML = 'Comments';
-  //added a class to homepage comment btn
-  btnComments.className = "showbtnComment";
+  // added a class to homepage comment btn
+  btnComments.className = 'showbtnComment';
   showItem.appendChild(btnComments);
 
   const btnReserve = document.createElement('button');
