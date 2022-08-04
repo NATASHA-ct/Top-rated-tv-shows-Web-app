@@ -31,7 +31,7 @@ showsArray.forEach((item) => {
 
     opencomments.forEach((btn) => {
       btn.addEventListener("click", () => {
-        showPopup(item.id);
+        showPopup(item);
       });
     });
 

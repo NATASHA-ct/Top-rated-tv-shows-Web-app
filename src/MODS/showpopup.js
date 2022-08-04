@@ -5,7 +5,7 @@ const showPopup = async (id) => {
     const {
             image,
             name,
-            summary,
+            network,
             language,
             genres,
             rating,
@@ -41,15 +41,15 @@ const showPopup = async (id) => {
         showstats.className = "show-stats";
          
        
-        const showsummary= document.createElement("li");
-        showsummary.className = "stats";
-        showsummary.innerText = summary;
-        showstats.appendChild(showsummary);        
+        const showcountry = document.createElement("li");
+        showcountry.className = "stats";
+        showcountry.innerText = network;
+        showstats.appendChild(showcountry);        
 
         const showlanguage = document.createElement("li");
         showlanguage.className = "stats";
         showlanguage.innerText = language;
-        showstats.appendChild(showlanuage);  
+        showstats.appendChild(showlanguage);  
 
         const showgenres = document.createElement("li");
         showgenres.className = "stats";
@@ -105,30 +105,29 @@ const showPopup = async (id) => {
         formmain.method = "GET" ;
         formsec.appendChild(formmain); 
 
-        //inside form inputs
-        const user = document.createElement("input");
-        user.className = "text";
-        user.type = "text" ;
-        user.id = "username";
-        user.placeholder = "Enter your name";
-        user.aria-required ;
-        formmain.appendChild(user); 
+        // //inside form inputs
+        // const user = document.createElement("input");
+        // user.className = "text";
+        // user.type = "text" ;
+        // user.id = "username";
+        // user.required = true;
+        // user.placeholder = "Enter your name";
+        // formmain.appendChild(user); 
 
-        const usercomm = document.createElement("input");
-        usercomm.className = "text";
-        usercomm.type = "text" ;
-        usercomm.id = "comment";
-        usercomm.placeholder = "Your insights";
-        usercomm.aria-required ;
-        formmain.appendChild(usercomm); 
+        // const usercomm = document.createElement("input");
+        // usercomm.className = "text";
+        // usercomm.type = "text" ;
+        // usercomm.id = "comment";
+        // usercomm.required = true;
+        // usercomm.placeholder = "Your insights";
+        // formmain.appendChild(usercomm); 
 
-        const commBtn = document.createElement("input");
-        commBtn.className = "com-btn";
-        commBtn.type = "submit" ;
-        commBtn.id = "submit";
-        commBtn.value = "Comment";
-        commBtn.aria-required ;
-        formmain.appendChild(usercomm); 
+        // const commBtn = document.createElement("input");
+        // commBtn.className = "com-btn";
+        // commBtn.type = "submit" ;
+        // commBtn.id = "submit";
+        // commBtn.value = "Comment";
+        //  formmain.appendChild(usercomm); 
 
     body.appendChild(commentsPopup);
 };

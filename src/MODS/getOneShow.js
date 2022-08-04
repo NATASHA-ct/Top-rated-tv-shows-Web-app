@@ -1,5 +1,5 @@
 const getOneShow = async (id) => {
-    
+
   const baseURL = "https://api.tvmaze.com/lookup/shows?imdb=";
   const uniqueURL = `${baseURL}${id}`;
  
@@ -8,9 +8,9 @@ const getOneShow = async (id) => {
   
   
   return {
-    image: jsonresponse.image,
+    image: jsonresponse.image.medium,
     name: jsonresponse.name,
-    summary: jsonresponse.summary,
+    network: jsonresponse.network.country.name,
     language: jsonresponse.language,
     genres: jsonresponse.genres,
     rating: jsonresponse.rating.average,
