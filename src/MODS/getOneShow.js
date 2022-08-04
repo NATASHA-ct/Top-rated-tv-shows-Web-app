@@ -8,9 +8,9 @@ const getOneShow = async (id) => {
   
   
   return {
-    image: jsonresponse.image.medium,
+    image: jsonresponse.image.original,
     name: jsonresponse.name,
-    network: jsonresponse.network.country.name,
+    type: jsonresponse.type,
     language: jsonresponse.language,
     genres: jsonresponse.genres,
     rating: jsonresponse.rating.average,

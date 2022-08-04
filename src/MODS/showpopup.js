@@ -5,7 +5,7 @@ const showPopup = async (id) => {
     const {
             image,
             name,
-            network,
+            type,
             language,
             genres,
             rating,
@@ -41,56 +41,55 @@ const showPopup = async (id) => {
         showstats.className = "show-stats";
          
        
-        const showcountry = document.createElement("li");
-        showcountry.className = "stats";
-        showcountry.innerText = network;
-        showstats.appendChild(showcountry);        
+        const showtype = document.createElement("li");
+        showtype.className = "stats";
+        showtype.innerText = "Type: " + type;
+        showstats.appendChild(showtype);        
 
         const showlanguage = document.createElement("li");
         showlanguage.className = "stats";
-        showlanguage.innerText = language;
+        showlanguage.innerText = "Language: " + language;
         showstats.appendChild(showlanguage);  
 
         const showgenres = document.createElement("li");
         showgenres.className = "stats";
-        showgenres.innerText = genres;
+        showgenres.innerText = "Genres: " + genres;
         showstats.appendChild(showgenres);  
 
         const showrating = document.createElement("li");
         showrating.className = "stats";
-        showrating.innerText = rating;
+        showrating.innerText = "Star-rating: " + rating;
         showstats.appendChild(showrating);  
         
          commentsPopup.appendChild(showstats);
 
 //people comments .......
 
-       //comments heading
-        const commenthd = document.createElement("h2");
-        commenthd.className = "hcomments";
-        commenthd.innerText = "Viewer's comments";
-        commentsPopup.appendChild(commenthd); 
+    //    //comments heading
+    //     const commenthd = document.createElement("h2");
+    //     commenthd.className = "hcomments";
+    //     commenthd.innerText = "Viewer's comments";
+    //     commentsPopup.appendChild(commenthd); 
 
-     // given comments
-        const viewers = document.createElement("ul");
-        viewers.className = "people-comments";
+    //  // given comments
+    //     const viewers = document.createElement("ul");
+    //     viewers.className = "people-comments";
 
-    //temporary viewer list
-        const viewerA= document.createElement("li");
-        viewerA.className = "stats";
-        viewers.appendChild(viewerA);        
+    // //temporary viewer list
+    //     const viewerA= document.createElement("li");
+    //     viewerA.className = "stats";
+    //     viewers.appendChild(viewerA);        
 
-        const viewerB= document.createElement("li");
-        viewerB.className = "viewer";
-        viewers.appendChild(viewerB); 
+    //     const viewerB= document.createElement("li");
+    //     viewerB.className = "viewer";
+    //     viewers.appendChild(viewerB); 
         
-        commentsPopup.appendChild(viewers);
+    //     commentsPopup.appendChild(viewers);
 
 //FORM ADD VIEWER AND COMMENT
     //main container
         const formsec = document.createElement("section");
         formsec.className = "addComments";
-        formsec.innerText = "Viewer's comments";
         commentsPopup.appendChild(formsec); 
     
     //heading of the section
