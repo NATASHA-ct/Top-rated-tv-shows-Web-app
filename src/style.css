@@ -174,15 +174,15 @@ li {
 
 .showimage {
   margin: 0 auto;
-  width: 80%;
+  width: 70%;
   height: 100%;
 }
 
 .popClose {
   font-size: 4em;
   background-color: #181716;
-  border:none;
-  color:var(--yellow);
+  border: none;
+  color: var(--yellow);
 }
 
 .show-name {
