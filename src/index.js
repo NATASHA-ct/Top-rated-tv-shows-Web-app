@@ -4,7 +4,6 @@ import displayHome from './modules/display-home.js';
 import countShowItems from './modules/count-show-items.js';
 import showPopup from './MODS/showpopup.js';
 
-
 // adding logo to the header
 
 const logoContainer = document.querySelector('.logo');
