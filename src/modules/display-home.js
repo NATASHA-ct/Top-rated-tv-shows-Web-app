@@ -37,6 +37,8 @@ const displayHome = (item) => {
 
   const btnComments = document.createElement('button');
   btnComments.innerHTML = 'Comments';
+  btnComments.id = item;
+  btnComments.className = 'showbtnComment';
   showItem.appendChild(btnComments);
 
   const btnReserve = document.createElement('button');
