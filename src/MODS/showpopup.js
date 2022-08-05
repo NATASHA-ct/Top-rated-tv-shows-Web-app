@@ -1,4 +1,6 @@
 import getOneShow from './getOneShow.js';
+import getComments from "./get-comments.js";
+import getNumberComments from "./get-com-total.js";
 
 const showPopup = async (id) => {
   const showId = id;
@@ -71,69 +73,105 @@ const showPopup = async (id) => {
   commentsPopup.appendChild(showstats);
 
   // people comments .......
+    const commentCounter = await getNumberComments(showId);
 
-  //    //comments heading
-  //     const commenthd = document.createElement("h2");
-  //     commenthd.className = "hcomments";
-  //     commenthd.innerText = "Viewer's comments";
-  //     commentsPopup.appendChild(commenthd);
+     //comments heading
+      const commenthd = document.createElement("h2");
+      commenthd.className = "hcomments";
+      
+      //Adding a counter to comment section
+       if (commentCounter === undefined) {
+         commenthd.textContent = "Viewer's comments (0)";
+       } else {
+        commenthd.textContent = `Viewer's comments (${commentCounter})`;
+       }
+      commentsPopup.appendChild(commenthd);
 
-  //  // given comments
-  //     const viewers = document.createElement("ul");
-  //     viewers.className = "people-comments";
+   // given comments
+      const viewers = document.createElement("ul");
+      viewers.className = "people-comments";
+      commentsPopup.appendChild(viewers);
 
-  // //temporary viewer list
-  //     const viewerA= document.createElement("li");
-  //     viewerA.className = "stats";
-  //     viewers.appendChild(viewerA);
+  //Adding comments for a specific show
+   const comments = await getComments(showId);
+   for (let i = 0; i < comments.length; i += 1) {
+     const commentText = document.createElement("li");
+     viewers.appendChild(commentText);
+     commentText.textContent = `${comments[i].creation_date} ${comments[i].username}: ${comments[i].comment}`;
+   }
 
-  //     const viewerB= document.createElement("li");
-  //     viewerB.className = "viewer";
-  //     viewers.appendChild(viewerB);
 
-  //     commentsPopup.appendChild(viewers);
+  //FORM ADD VIEWER AND COMMENT
+      //main container
+          const formsec = document.createElement("section");
+          formsec.className = "addComments";
+          commentsPopup.appendChild(formsec);
 
-  // //FORM ADD VIEWER AND COMMENT
-  //     //main container
-  //         const formsec = document.createElement("section");
-  //         formsec.className = "addComments";
-  //         commentsPopup.appendChild(formsec);
+      //heading of the section
+          const hAdd = document.createElement("h2");
+          hAdd.className = "hAdd";
+          hAdd.innerText = "Add a comment";
+          formsec.appendChild(hAdd);
 
-  //     //heading of the section
-  //         const hAdd = document.createElement("h2");
-  //         hAdd.className = "hAdd";
-  //         hAdd.innerText = "Add a comment";
-  //         formsec.appendChild(hAdd);
+      //FORM .......................
+          const formmain = document.createElement("form");
+          formmain.action = "#" ;
+          formmain.method = "GET" ;
+          formsec.appendChild(formmain);
 
-  //     //FORM .......................
-  //         const formmain = document.createElement("form");
-  //         formmain.action = "#" ;
-  //         formmain.method = "GET" ;
-  //         formsec.appendChild(formmain);
+          //inside form inputs
+          const user = document.createElement("input");
+          user.className = "text";
+          user.type = "text" ;
+          user.id = "username";
+          user.required = true;
+          user.placeholder = "Enter your name";
+          formmain.appendChild(user);
 
-  // //inside form inputs
-  // const user = document.createElement("input");
-  // user.className = "text";
-  // user.type = "text" ;
-  // user.id = "username";
-  // user.required = true;
-  // user.placeholder = "Enter your name";
-  // formmain.appendChild(user);
+          const usercomm = document.createElement("input");
+          usercomm.className = "text";
+          usercomm.type = "text" ;
+          usercomm.id = "comment";
+          usercomm.required = true;
+          usercomm.placeholder = "Your insights";
+          formmain.appendChild(usercomm);
 
-  // const usercomm = document.createElement("input");
-  // usercomm.className = "text";
-  // usercomm.type = "text" ;
-  // usercomm.id = "comment";
-  // usercomm.required = true;
-  // usercomm.placeholder = "Your insights";
-  // formmain.appendChild(usercomm);
+          const commBtn = document.createElement("input");
+          commBtn.className = "com-btn";
+          commBtn.type = "submit" ;
+          commBtn.id = "submit";
+          commBtn.value = "Comment";
+          formmain.appendChild(usercomm);
+    
+  //Add event listener to comment button
+    const clickToComment = document.querySelector('.com-btn');
+    clickToComment.addEventListener('click', async (e) => {
+        e.preventDefault();
+        await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/M3YWGWQqUrOVctHXGrPW/comments', {
+          method: 'POST',
+          body: JSON.stringify({
+            item_id: id,
+            username: nameInput.value,
+            comment: insightsInput.value,
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
 
-  // const commBtn = document.createElement("input");
-  // commBtn.className = "com-btn";
-  // commBtn.type = "submit" ;
-  // commBtn.id = "submit";
-  // commBtn.value = "Comment";
-  //  formmain.appendChild(usercomm);
+
+    const newArrayofComments = await getComments(showId);
+    const commentText = document.createElement('li');
+    commentText.textContent = `${newArrayofComments[newArrayofComments.length - 1].creation_date} ${newArrayofComments[newArrayofComments.length - 1].username}: ${newArrayofComments[newArrayofComments.length - 1].comment}`;
+    commentsPopup.appendChild(commentText);
+
+    const newCommentsCounter = await getNumberComments(showId);
+    if (newCommentsCounter === undefined) {
+       commenthd.textContent = "Viewer's comments (0)";
+       } else {
+        commenthd.textContent = `Viewer's comments (${newCommentsCounter})`;
+    }
+  }); 
 
   body.appendChild(commentsPopup);
 };
