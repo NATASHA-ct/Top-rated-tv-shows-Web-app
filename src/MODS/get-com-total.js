@@ -1,4 +1,4 @@
-import getComments from "./get-comments.js";
+import getComments from './get-comments.js';
 
 const getNumberComments = async (id) => {
   let numberOfComments = await getComments(id);

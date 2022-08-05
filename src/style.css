@@ -266,8 +266,16 @@ form {
 }
 
 .com-btn {
-  padding: 10px;
   width: 6em;
   font-size: 18px;
   font-weight: 700;
+  border: none;
+  background-color: var(--yellow);
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  padding: 5px 15px;
+  margin: 5px;
+  text-align: center;
 }
