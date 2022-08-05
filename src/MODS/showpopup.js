@@ -142,13 +142,7 @@ const showPopup = async (id) => {
   commBtn.value = "Comment";
   formmain.appendChild(commBtn);
 
-  // //.....................  Add Event listener  .......................
-  document.getElementById("submit").addEventListener("click", () => {
-  const username = document.getElementById("username").value;
-  const comment = document.getElementById("comment").value;
-  addShowComment(username, comment);
-  });
-
+ 
   body.appendChild(commentsPopup);
 };
 
