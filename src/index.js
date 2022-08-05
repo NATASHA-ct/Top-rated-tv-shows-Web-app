@@ -1,7 +1,9 @@
 import './style.css';
 import logo from './assets/logo.png';
 import displayHome from './modules/display-home.js';
+import countShowItems from './modules/count-show-items.js';
 import showPopup from './MODS/showpopup.js';
+
 
 // adding logo to the header
 
@@ -23,6 +25,8 @@ const showsArray = [theOffice, breakingBad, gibi, avatar, friends, rickMorty];
 
 showsArray.forEach(displayHome);
 
+countShowItems();
+
 // EVENT LISTENER HOME COMMENT BTN TO SHOW POPUP
 
 const openComments = document.querySelectorAll('.showbtnComment');
@@ -33,8 +37,3 @@ openComments.forEach((btn) => {
     showPopup(item);
   });
 });
-
-
-
-
-
