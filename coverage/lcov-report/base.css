@@ -33,6 +33,7 @@ pre {
 }
 a { color: #0074d9; text-decoration: none; }
 a:hover { text-decoration: underline; }
+
 .strong { font-weight: bold; }
 .space-top1 { padding: 10px 0 0 0; }
 .pad2y { padding: 20px 0; }
@@ -40,6 +41,7 @@ a:hover { text-decoration: underline; }
 .pad2x { padding: 0 20px; }
 .pad2 { padding: 20px; }
 .pad1 { padding: 10px; }
+
 .space-left2 { padding-left: 55px; }
 .space-right2 { padding-right: 20px; }
 .center { text-align: center; }
@@ -57,10 +59,12 @@ a:hover { text-decoration: underline; }
 @media only screen and (max-width: 640px) {
   .col3 { width: 100%; max-width: 100%; }
   .hide-mobile { display: none !important; }
+
 }
 
 .quiet {
   color: #7f7f7f;
+
   color: rgba(0, 0, 0, 0.5);
 }
 .quiet a { opacity: 0.7; }
@@ -69,7 +73,9 @@ a:hover { text-decoration: underline; }
   font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   font-size: 10px;
   color: #555;
+
   background: #e8e8e8;
+
   padding: 4px 5px;
   border-radius: 3px;
   vertical-align: middle;
@@ -137,6 +143,7 @@ table.coverage td span.cline-any {
 }
 .coverage-summary tr { border-bottom: 1px solid #bbb; }
 .keyline-all { border: 1px solid #ddd; }
+
 .coverage-summary td,
 .coverage-summary th { padding: 10px; }
 .coverage-summary tbody { border: 1px solid #bbb; }
@@ -155,6 +162,7 @@ table.coverage td span.cline-any {
 .coverage-summary th.abs,
 .coverage-summary td.pct,
 .coverage-summary td.abs { text-align: right; }
+
 .coverage-summary td.file { white-space: nowrap; }
 .coverage-summary td.pic { min-width: 120px !important; }
 .coverage-summary tfoot td { }
@@ -258,6 +266,7 @@ pre.prettyprint {
   border: none !important;
   padding: 0 !important;
   margin: 0 !important;
+
 }
 .com { color: #999 !important; }
 .ignore-none { color: #999; font-weight: normal; }
