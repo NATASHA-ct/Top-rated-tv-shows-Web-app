@@ -41,10 +41,6 @@ const displayHome = (item) => {
   btnComments.className = 'showbtnComment';
   showItem.appendChild(btnComments);
 
-  const btnReserve = document.createElement('button');
-  btnReserve.innerHTML = 'Reservations';
-  showItem.appendChild(btnReserve);
-
   const uniqueURL = `${baseURL}${item}`;
   getShow(uniqueURL, showImg, showName);
 
