@@ -216,7 +216,7 @@ li {
   font-weight: bold;
   justify-items: stretch;
   gap: 2em;
- }
+}
 
 .stats {
   display: flex;
