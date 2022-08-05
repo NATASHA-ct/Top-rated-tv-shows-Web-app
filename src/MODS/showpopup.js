@@ -73,6 +73,7 @@ const showPopup = async (id) => {
   commentsPopup.appendChild(showstats);
 
   // people comments .......
+
   const commentCounter = await getNumberComments(showId);
 
   // comments heading
