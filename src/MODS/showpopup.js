@@ -139,31 +139,35 @@ const showPopup = async (id) => {
           const commBtn = document.createElement("input");
           commBtn.className = "com-btn";
           commBtn.type = "submit" ;
-          commBtn.id = "submit";
+          commBtn.id = showId;
           commBtn.value = "Comment";
-          formmain.appendChild(usercomm);
+          formmain.appendChild(commBtn);
     
-  //Add event listener to comment button
-    const clickToComment = document.querySelector('.com-btn');
-    clickToComment.addEventListener('click', async (e) => {
+  //Add event listener to comment button on the popup
+    commBtn.addEventListener('click', async (e) => {
+        
         e.preventDefault();
+        const item = e.target.id;
+       
         await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/M3YWGWQqUrOVctHXGrPW/comments', {
           method: 'POST',
           body: JSON.stringify({
-            item_id: id,
-            username: nameInput.value,
-            comment: insightsInput.value,
+            item_id: item,
+            username: user.value,
+            comment: usercomm.value,
           }),
           headers: {
             'Content-Type': 'application/json',
           },
+          
         });
 
 
     const newArrayofComments = await getComments(showId);
     const commentText = document.createElement('li');
+
     commentText.textContent = `${newArrayofComments[newArrayofComments.length - 1].creation_date} ${newArrayofComments[newArrayofComments.length - 1].username}: ${newArrayofComments[newArrayofComments.length - 1].comment}`;
-    commentsPopup.appendChild(commentText);
+    viewers.appendChild(commentText);
 
     const newCommentsCounter = await getNumberComments(showId);
     if (newCommentsCounter === undefined) {
