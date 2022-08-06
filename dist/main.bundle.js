@@ -179,6 +179,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/modules/count-show-items.js":
+/*!*****************************************!*\
+  !*** ./src/modules/count-show-items.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst countShowItems = () => {\r\n  const arrItems = document.querySelectorAll('.showItem');\r\n  const counterItems = arrItems.length;\r\n  const amountItems = document.getElementById('amountItems');\r\n  amountItems.innerHTML = `Most-Watched (${counterItems})`;\r\n  return counterItems;\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (countShowItems);\n\n//# sourceURL=webpack://top-rated-tv-shows-web-app/./src/modules/count-show-items.js?");
+
+/***/ }),
+
 /***/ "./src/modules/display-home.js":
 /*!*************************************!*\
   !*** ./src/modules/display-home.js ***!
