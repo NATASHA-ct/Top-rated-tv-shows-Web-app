@@ -15,7 +15,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://natasha-ct.github.io/Top-rated-tv-shows-Web-app/dist/)
 
 
 ### Setup
