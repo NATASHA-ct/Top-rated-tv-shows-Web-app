@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Top-rated-tv-shows-Web-app
-> A web application showing API results of top rated tv shows.
+> TV Shows Web App - A web application based on an external API which contains information about TV shows. th web app let you like the shows that you like the most and comment what you think about them making use of an involvement API to save this interaction information.
 
 
 ## Built With
@@ -10,11 +10,12 @@
 - HTML
 - CSS
 - Webpack
+- REST API 
 
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://natasha-ct.github.io/Top-rated-tv-shows-Web-app/dist/)
 
 
 ### Setup
@@ -40,7 +41,9 @@
 - Added Eslint
 - Jest for testing
 
-
+### Acknowledgement
+- The images and information in this project was added [TVMaze](https://www.tvmaze.com/api).
+- The likes and comments information in this project was added using [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270).
 
 ## Authors
 
@@ -60,7 +63,7 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/NATASHA-ct/Top-rated-tv-shows-Web-app/issues).
 
 ## Show your support
 
