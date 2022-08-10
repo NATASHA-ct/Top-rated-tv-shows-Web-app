@@ -17,6 +17,12 @@
 
 [Live Demo Link](https://natasha-ct.github.io/Top-rated-tv-shows-Web-app/dist/)
 
+## Web App Snapshots
+<img width="949" alt="image" src="https://user-images.githubusercontent.com/106079814/183878284-3581c4df-f94c-4506-b92d-e2075c282022.png">
+
+  ### comments popup
+  <img width="942" alt="image" src="https://user-images.githubusercontent.com/106079814/183878765-7d83ae8a-f9fd-465b-b6bc-8e7671478a5e.png">
+
 
 ### Setup
 - To clone the repository run `[https://github.com/NATASHA-ct/Top-rated-tv-shows-Web-app]` in your terminal
