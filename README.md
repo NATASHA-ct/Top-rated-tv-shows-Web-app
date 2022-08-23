@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Top-rated-tv-shows-Web-app
-> TV Shows Web App - A web application based on an external API which contains information about TV shows. th web app let you like the shows that you like the most and comment what you think about them making use of an involvement API to save this interaction information.
+> TV Shows Web App - A web application based on an external API which contains information about TV shows. the web app lets you like the shows that you like the most and comment what you think about them making use of an involvement API to save this interaction information.
 
 
 ## Built With
